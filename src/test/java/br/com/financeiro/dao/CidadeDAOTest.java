@@ -14,14 +14,14 @@ public class CidadeDAOTest {
 	@Test
 	@Ignore
 	public void salvar() {
-		Long codigoEstado = 2L;
+		Long codigoEstado = 3L;
 		
 		EstadoDAO estadoDAO = new EstadoDAO();
 
 		Estado estado = estadoDAO.buscar(codigoEstado);
 
 		Cidade cidade = new Cidade();
-		cidade.setNome("Belo Horizonte");
+		cidade.setNome("Júlio de Castilhos");
 		cidade.setEstado(estado);
 
 		CidadeDAO cidadeDAO = new CidadeDAO();

@@ -2,7 +2,6 @@ package br.com.financeiro.dao;
 
 import java.util.List;
 
-
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -13,16 +12,14 @@ public class EstadoDAOTest {
 	@Ignore
 	public void salvar(){
 		Estado estado = new Estado();
-		estado.setNome("Rio de Janeiro");
-		estado.setSigla("RJ");
+		estado.setNome("Rio Grande do Sul");
+		estado.setSigla("RS");
 		
-		Estado estado2 = new Estado();
-		estado2.setNome("Minas Gerais");
-		estado2.setSigla("MG");
+		
 		
 		EstadoDAO estadoDAO = new EstadoDAO();
 		estadoDAO.salvar(estado);
-		estadoDAO.salvar(estado2);
+		
 	}
 	
 	
