@@ -8,7 +8,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Lista dos Produtos</title>
 	<h:outputStylesheet library="css" name="estilo.css" />
-	<h:outputScript library="JS" name="scripts.js"/> 
 </h:head>
 <h:body>
 	<p:growl id="mensagem" />
@@ -19,7 +18,7 @@
 				paginator="true" value="#{produtoBean.produtos}" var="produto"
 				rows="5">
 				<f:facet name="header">
-					<p:commandButton value="Novo" actionListener="#{cidadeBean.novo}"
+					<p:commandButton value="Novo" actionListener="#{produtoBean.novo}"
 						oncomplete="PF('dialogo').show();"
 						update=":mensagem :formCadastro:painel">
 						<f:actionListener
