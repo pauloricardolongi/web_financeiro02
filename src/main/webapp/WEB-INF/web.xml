@@ -27,4 +27,11 @@
     <listener-class>br.com.financeiro.util.HibernateContexto</listener-class>
     </listener>
 	
+	
+ <!-- Configuração do Upload --> 
+<context-param>
+<param-name>primefaces.UPLOADER</param-name>
+<param-value>native</param-value>
+ </context-param>
+	
 </web-app>

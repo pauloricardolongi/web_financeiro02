@@ -7,12 +7,16 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 
 
 @Entity
 public class Produto extends GenericDomain {
 	@Column(length = 80, nullable = false)
 	private String descricao;
+	
+	@Transient
+	private String caminho;
 	
 	@Column(nullable = false)
 	private Short quantidade;
@@ -24,6 +28,13 @@ public class Produto extends GenericDomain {
 	@JoinColumn(nullable = false)
 	private Fornecedor fornecedor;
 
+	public String getCaminho() {
+		return caminho;
+	}
+	public void setCaminho(String caminho) {
+		this.caminho = caminho;
+	} 
+	
 	public String getDescricao() {
 		return descricao;
 	}
